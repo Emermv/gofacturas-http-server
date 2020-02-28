@@ -14,9 +14,11 @@ import java.util.HashMap;
 
 public class Socket extends App{
     private String code;
+    private Alert alert;
    public  io.socket.client.Socket socket;
     public Socket(String url, HashMap<String,Settings> s) {
         super(s);
+        this.alert=new Alert();
         try {
             IO.Options options = new IO.Options();
             options.query="code="+settings.get("CODE").getValue()+"-"+settings.get("USER").getValue();
@@ -26,6 +28,7 @@ public class Socket extends App{
                 @Override
                 public void call(Object... args) {
                     System.out.println("connected");
+                    alert.show("CONEXIÓN ESTABLECIDA","",null);
                 }
             }).on(io.socket.client.Socket.EVENT_DISCONNECT, new Emitter.Listener() {
                 @Override
@@ -67,8 +70,12 @@ public class Socket extends App{
                 @Override
                 public void call(Object... objects) {
                     JSONObject args=(JSONObject) objects[0];
-                 //   System.out.println(args.toString());
+                   System.out.println(args.toString());
                     new Printer(args.getString("url"));
+                    String  name=args.getString("title");
+                    if(name!=null && !name.isEmpty()){
+                        alert.show("IMPRIMIENDO",name,null);
+                    }
                 }
             });
 
@@ -92,6 +99,7 @@ public class Socket extends App{
     public void emit(String event,JSONObject args){
         args.put("code",settings.get("CODE").getValue());
         args.put("name",settings.get("USER").getValue());
+       // args.put("token",settings.get("TOKEN"));
         socket.emit(event,args);
     }
 }

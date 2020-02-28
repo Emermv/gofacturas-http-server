@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05b96aea-196a-4baf-b091-145e99769e83" name="Default Changelist" comment="" />
+    <list default="true" id="05b96aea-196a-4baf-b091-145e99769e83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/gofacturas.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/gofacturas.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gofacturas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gofacturas/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gofacturas/core/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gofacturas/core/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gofacturas/core/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gofacturas/core/Socket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gofacturas/module/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gofacturas/module/Printer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +22,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Y0d2v0ysATe3QePbN16yxgEY4T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,7 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../APP/gofacturas" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -94,39 +105,52 @@
     </state>
     <state x="575" y="286" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1582162829393" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582123341660" />
-    <state x="651" y="170" key="FileChooserDialogImpl" timestamp="1582142473845">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1582260359073">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582086309788" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582260359073" />
     <state x="651" y="170" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582142473845" />
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1582182754947">
+    <state width="1323" height="33" key="GridCell.Tab.0.bottom" timestamp="1582871599001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582182754947" />
+    <state width="1323" height="33" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582871599001" />
     <state width="1877" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582154439792" />
-    <state width="1323" height="89" key="GridCell.Tab.0.center" timestamp="1582182754947">
+    <state width="1323" height="33" key="GridCell.Tab.0.center" timestamp="1582871599001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582182754947" />
+    <state width="1323" height="33" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582871599001" />
     <state width="1877" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582154439792" />
-    <state width="1323" height="89" key="GridCell.Tab.0.left" timestamp="1582182754947">
+    <state width="1323" height="33" key="GridCell.Tab.0.left" timestamp="1582871599001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582182754947" />
+    <state width="1323" height="33" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582871599001" />
     <state width="1877" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582154439792" />
-    <state width="1323" height="89" key="GridCell.Tab.0.right" timestamp="1582182754947">
+    <state width="1323" height="33" key="GridCell.Tab.0.right" timestamp="1582871599001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582182754947" />
+    <state width="1323" height="33" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582871599001" />
     <state width="1877" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582154439792" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1582084637473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1582084637473" />
-    <state x="339" y="164" width="672" height="677" key="run.anything.popup" timestamp="1582182754998">
+    <state x="378" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1582865105994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582182754998" />
+    <state x="378" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582865105994" />
+    <state x="65" y="0" key="new project wizard" timestamp="1582260148879">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1582260148879" />
+    <state x="339" y="164" width="672" height="677" key="run.anything.popup" timestamp="1582871599182">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582871599182" />
     <state x="476" y="234" width="945" height="968" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582142366686" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ansmtpserver$Main.ic" NAME="Main Coverage Results" MODIFIED="1582863968199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>gofacturas.*</FILTER>
+    </SUITE>
   </component>
 </project>

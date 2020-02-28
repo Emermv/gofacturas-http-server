@@ -27,5 +27,14 @@ public  Socket socket=null;
             socket.stop();
         }
     }
-
+/*
+public static  void main(String [] args){
+    Settings s=new Settings();
+    HashMap<String, gofacturas.entity.Settings> os=s.getInCode(new String[]{"TOKEN","CODE","USER"});
+   Socket socket=new Socket(Constants.SOCKET_URI,os);
+   socket.start();
+    Alert alert=new Alert();
+    alert.show("HOLA TITULO","notificacion  de prueba",null);
+}
+*/
 }
