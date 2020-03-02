@@ -1,13 +1,17 @@
 package gofacturas;
 
 import com.alexkasko.installer.DaemonLauncher;
+import gofacturas.core.Alert;
 import gofacturas.core.Constants;
 import gofacturas.core.Socket;
+import gofacturas.module.Printer;
 import gofacturas.service.Settings;
 
+import java.io.IOException;
 import java.util.HashMap;
 
-public class Main implements DaemonLauncher {
+public class Main implements DaemonLauncher{
+
 public  Socket socket=null;
     public  Main() {
        super();
@@ -27,14 +31,16 @@ public  Socket socket=null;
             socket.stop();
         }
     }
+
+
 /*
 public static  void main(String [] args){
-    Settings s=new Settings();
+   Settings s=new Settings();
     HashMap<String, gofacturas.entity.Settings> os=s.getInCode(new String[]{"TOKEN","CODE","USER"});
    Socket socket=new Socket(Constants.SOCKET_URI,os);
    socket.start();
-    Alert alert=new Alert();
-    alert.show("HOLA TITULO","notificacion  de prueba",null);
+
 }
 */
+
 }

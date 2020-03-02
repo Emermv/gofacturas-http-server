@@ -28,7 +28,7 @@ public class Socket extends App{
                 @Override
                 public void call(Object... args) {
                     System.out.println("connected");
-                    alert.show("CONEXIÓN ESTABLECIDA","",null);
+                 //   alert.show("CONEXIÓN ESTABLECIDA","",null);
                 }
             }).on(io.socket.client.Socket.EVENT_DISCONNECT, new Emitter.Listener() {
                 @Override
@@ -72,10 +72,7 @@ public class Socket extends App{
                     JSONObject args=(JSONObject) objects[0];
                    System.out.println(args.toString());
                     new Printer(args.getString("url"));
-                    String  name=args.getString("title");
-                    if(name!=null && !name.isEmpty()){
-                        alert.show("IMPRIMIENDO",name,null);
-                    }
+
                 }
             });
 

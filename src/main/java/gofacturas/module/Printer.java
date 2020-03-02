@@ -8,8 +8,9 @@ import org.apache.pdfbox.printing.Scaling;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.print.PrintService;
-import javax.print.PrintServiceLookup;
+import javax.print.*;
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import javax.print.attribute.PrintRequestAttributeSet;
 import java.awt.*;
 import java.awt.print.*;
 import java.io.File;
@@ -24,6 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
         public class Printer {
+            private File file;
                 public Printer() {
                 }
 /*
@@ -33,7 +35,7 @@ import java.util.logging.Logger;
                 public Printer(String uri) {
         //module/sales/pdf/55/eyJydWMiOiIxMjM0NTY3ODkxMiIsInVzZXIiOiJhZG1pbkBnb2ZhY3R1cmFzLmNvbSIsInBhc3N3b3JkIjoiYWRtaW5nbyJ9
         PDDocument pdf= getFile(Constants.ROOT+uri);
-                        Alert alert=new Alert();
+
         if(pdf!=null){
 
                /* Paper paper = new Paper();
@@ -44,33 +46,42 @@ import java.util.logging.Logger;
                 Book book = new Book();
                 book.append(new PDFPrintable(pdf, Scaling.ACTUAL_SIZE), pageFormat, pdf.getNumberOfPages());
 */
+
+
                 PDFPrintable printable = new PDFPrintable(pdf, Scaling.ACTUAL_SIZE);
         ArrayList<PrintService> services= getPrinters();
                 PrinterJob job = PrinterJob.getPrinterJob();
             //    job.setPageable(book);
               // job.setPageable(new PDFPageable(pdf));
-                job.setPrintable(printable);
+
+           /*     byte[] open = {27, 112, 48, 55, 121};
+                DocFlavor flavor = DocFlavor.BYTE_ARRAY.AUTOSENSE;
+                Doc doc = new SimpleDoc(open,flavor,null);*/
+
+           job.setPrintable(printable);
         for(PrintService service: services){
         System.out.println(service.getName());
 
         try {
         job.setPrintService(service);
         job.print();
+        open_cash_drawer();
 
         } catch (PrinterException ex) {
         System.out.println("Error al imprimir en: "+service.getName());
-        alert.show("ERROR","Error al imprimir en: "+service.getName(), TrayIcon.MessageType.ERROR);
-       // Logger.getLogger(Printer.class.getName()).log(Level.SEVERE, null, ex);
+
+       Logger.getLogger(Printer.class.getName()).log(Level.SEVERE, null, ex);
         }finally {
                 try {
                         pdf.close();
+                       file.delete();
                 } catch (IOException e) {
                         e.printStackTrace();
                 }
         }
         }
         }else{
-                alert.show("ERROR","Ocurrió un error al obtener la información", TrayIcon.MessageType.ERROR);
+
         System.out.println("No se puede descargar el archivo");
         }
 
@@ -88,7 +99,8 @@ import java.util.logging.Logger;
         //   FileChannel fileChannel = fileOutputStream.getChannel();
         fileOutputStream.getChannel()
         .transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
-        return PDDocument.load(new File(FILE_OUT));
+            file=new File(FILE_OUT);
+        return PDDocument.load(file);
         } catch (MalformedURLException ex) {
         Logger.getLogger(Printer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -138,6 +150,34 @@ import java.util.logging.Logger;
         }
         private  PrintService getDefaultPrintService(){
         return PrintServiceLookup.lookupDefaultPrintService();
+        }
+        public void open_cash_drawer(){
+         /*   byte[] open = {27,112,0,100,(byte) 250};
+            PrintService pservice;
+            pservice = PrintServiceLookup.lookupDefaultPrintService();
+            DocPrintJob job = pservice.createPrintJob();
+            DocFlavor flavor = DocFlavor.BYTE_ARRAY.AUTOSENSE;
+            Doc doc = new SimpleDoc(open,flavor,null);
+            PrintRequestAttributeSet aset = new
+                    HashPrintRequestAttributeSet();
+            try {
+                job.print(doc, aset);
+            } catch (PrintException ex) {
+                System.out.println(ex.getMessage());
+            }*/
+            Process ps= null;
+            try {
+                ps = Runtime.getRuntime().exec(new String[]{"java","-jar","cash-drawer.jar"});
+                ps.waitFor();
+                java.io.InputStream is=ps.getInputStream();
+                byte b[]=new byte[is.available()];
+                is.read(b,0,b.length);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
 
         }
