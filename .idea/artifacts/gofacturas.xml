@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="gofacturas">
+    <output-path>$PROJECT_DIR$/out/artifacts/gofacturas</output-path>
+    <root id="archive" name="gofacturas.jar" />
+  </artifact>
+</component>

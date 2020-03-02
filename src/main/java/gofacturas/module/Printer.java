@@ -65,7 +65,7 @@ import java.util.logging.Logger;
         try {
         job.setPrintService(service);
         job.print();
-        open_cash_drawer();
+       // open_cash_drawer();
 
         } catch (PrinterException ex) {
         System.out.println("Error al imprimir en: "+service.getName());
